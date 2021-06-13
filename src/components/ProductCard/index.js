@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const ProductCard = ({ image, name, shortDescription, price }) => {
+const ProductCard = ({ slug, image, name, shortDescription, price }) => {
   return (
-    <Link href="/contact">
+    <Link href={`/menu/${slug}`}>
       <a className="text-center no-hover mb-10 md:mb-20 block">
         <div className="relative mb-12" style={{ height: "600px", zIndex: 1 }}>
           <Image
