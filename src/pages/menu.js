@@ -5,7 +5,7 @@ import { getMenuItems, getBaseURL } from "@/lib/api";
 
 export default function Menu({ products }) {
   return (
-    <Layout>
+    <Layout title="Menu">
       <main className="container md:w-8/12 px-3 md:px-0 mx-auto">
         <div className="h-screen pt-16">
           <h2 className="text-center my-6 text-4xl">Menu</h2>

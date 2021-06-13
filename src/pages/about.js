@@ -3,7 +3,7 @@ import { getAboutPage } from "@/lib/api";
 
 export default function About({ content }) {
   return (
-    <Layout>
+    <Layout title="About">
       <main className="container md:w-8/12 px-3 md:px-0 mx-auto">
         <div className="flex flex-col justify-center items-center h-screen">
           <h2 className="uppercase text-2xl md:text-3xl lg:text-4xl font-bold">
