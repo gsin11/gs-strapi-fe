@@ -26,7 +26,7 @@ export default function Home({ products }) {
             {products.dishes.map((o) => (
               <ProductCard
                 key={o.id}
-                slug={o.slug}
+                id={o.id}
                 name={o.name}
                 shortDescription={o.short_description}
                 price={`$${o.price}`}
