@@ -1,5 +1,5 @@
 module.exports = {
   images: {
-    domains: ["localhost"],
+    domains: ["localhost", "gsstrapi.blob.core.windows.net"],
   },
 };
