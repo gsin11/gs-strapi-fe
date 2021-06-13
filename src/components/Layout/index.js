@@ -38,7 +38,7 @@ const Layout = ({ title, children }) => {
         onClickHandler={() => {
           window.scrollTo(0, 0);
           setIsOpen(!isOpen);
-        }
+        }}
         isOpen={isOpen}
       />
       <Dropdown data={data} isOpen={isOpen} />
