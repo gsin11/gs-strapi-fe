@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-mono pt-16;
+}
+
+a {
+  @apply text-black;
+}
+
+a:not(.no-hover):hover,
+a:not(.no-hover):focus {
+  @apply underline;
+}
