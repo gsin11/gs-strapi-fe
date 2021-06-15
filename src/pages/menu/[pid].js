@@ -36,7 +36,7 @@ export async function getStaticPaths() {
   const promise = getMenuItems();
   return promise.then((response) => {
     const paths = response.dishes.map((item) => ({
-      params: { pid: item.id },
+      params: { pid: item.slug },
     }));
 
     // We'll pre-render only these paths at build time.
@@ -51,7 +51,7 @@ export async function getStaticProps({ params }) {
   // If the route is like /posts/1, then params.id is 1
   const promise = getSingleMenuItem(params.pid);
   return promise.then((response) => {
-    return { props: { item: response.dish } };
+    return { props: { item: response.dishes[0] } };
   });
 }
 

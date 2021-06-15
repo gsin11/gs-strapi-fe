@@ -13,7 +13,7 @@ export default function Menu({ products }) {
             {products.dishes.map((o) => (
               <ProductCard
                 key={o.id}
-                id={o.id}
+                slug={o.slug}
                 name={o.name}
                 shortDescription={o.short_description}
                 price={`$${o.price}`}
