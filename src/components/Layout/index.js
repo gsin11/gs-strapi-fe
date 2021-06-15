@@ -35,7 +35,10 @@ const Layout = ({ title, children }) => {
       </Head>
       <Navbar
         data={data}
-        onClickHandler={() => setIsOpen(!isOpen)}
+        onClickHandler={() => {
+          window.scrollTo(0, 0);
+          setIsOpen(!isOpen);
+        }}
         isOpen={isOpen}
       />
       <Dropdown data={data} isOpen={isOpen} />
