@@ -8,7 +8,7 @@ const ProductCard = ({ id, image, name, shortDescription, price }) => {
         <div className="relative mb-12" style={{ height: "600px", zIndex: 1 }}>
           <Image
             src={image}
-            alt="Picture of the author"
+            alt={name}
             layout="fill"
             objectFit="cover"
             quality="100"

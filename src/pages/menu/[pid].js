@@ -4,7 +4,7 @@ import Layout from "../../components/Layout";
 
 function Dish({ item }) {
   return (
-    <Layout>
+    <Layout title={item.name}>
       <main className="container md:w-8/12 px-3 md:px-0 mx-auto">
         <div className="h-screen pt-16">
           <h2 className="text-center my-6 text-4xl">{item.name}</h2>
@@ -15,7 +15,7 @@ function Dish({ item }) {
             >
               <Image
                 src={getBaseURL() + item.image[0].url}
-                alt="Picture of the author"
+                alt={item.name}
                 layout="fill"
                 objectFit="cover"
                 quality="100"
