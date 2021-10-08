@@ -16,26 +16,27 @@ export default function Home({ products }) {
           <button
             className="absolute bottom-4 text-2xl animate-bounce text-gray-800"
             onClick={() => scrollIntoView("products")}
+            aria-label="go to products"
           >
             V
           </button>
         </div>
-        <div id="products" className="h-screen pt-16">
-          <h2 className="text-center my-6 text-4xl">Products</h2>
-          <div className="max-w-md w-full mx-auto">
-            {products.dishes.map((o) => (
-              <ProductCard
-                key={o.id}
-                slug={o.slug}
-                name={o.name}
-                shortDescription={o.short_description}
-                price={`$${o.price}`}
-                image={getBaseURL() + o.image[0].url}
-              />
-            ))}
-          </div>
-        </div>
       </main>
+      <div id="products" className="pt-16">
+        <h2 className="text-center my-6 text-4xl">Products</h2>
+        <div className="max-w-md w-full mx-auto">
+          {products.dishes.map((o) => (
+            <ProductCard
+              key={o.id}
+              slug={o.slug}
+              name={o.name}
+              shortDescription={o.short_description}
+              price={`$${o.price}`}
+              image={getBaseURL() + o.image[0].url}
+            />
+          ))}
+        </div>
+      </div>
     </Layout>
   );
 }

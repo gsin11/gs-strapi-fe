@@ -11,7 +11,7 @@ const Navbar = ({ data, isOpen, onClickHandler }) => {
       <div className="hidden md:block">
         {data.map((o) => (
           <Link key={o.label} href={o.link}>
-            <a className="ml-4">{o.label}</a>
+            <a className="ml-4 hover:text-yellow-500">{o.label}</a>
           </Link>
         ))}
       </div>

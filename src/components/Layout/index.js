@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Navbar from "../Navbar";
 import Dropdown from "../Dropdown";
+import Footer from "../Footer";
 
 const data = [
   {
@@ -43,6 +44,7 @@ const Layout = ({ title, children }) => {
       />
       <Dropdown data={data} isOpen={isOpen} />
       {children}
+      <Footer navLinks={data} />
     </>
   );
 };
